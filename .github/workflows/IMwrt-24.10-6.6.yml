@@ -59,7 +59,7 @@ on:
         default: false
 
   schedule:
-    - cron: '0 16 * * *' # 北京时间每天00:00
+    - cron: '0 4 18 * *' # 每月18日4点定时编译
 
 permissions:
   contents: write

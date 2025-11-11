@@ -60,8 +60,8 @@ on:
         required: true
         default: true
 
-  schedule:
-    - cron: '0 16 * * *' # 北京时间每天00:00
+  #schedule:
+  #  - cron: '0 16 * * *' # 北京时间每天00:00
 
 permissions:
   contents: write

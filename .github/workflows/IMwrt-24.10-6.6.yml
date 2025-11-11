@@ -41,7 +41,7 @@ on:
           - 'openwrt-24.10-6.6'
       config_file:
         description: '配置文件'
-        default: '24.10-6.6.config'
+        default: '24.10-6.6_simple_seed.config'
         type: choice
         options:
           - '24.10-6.6.config'

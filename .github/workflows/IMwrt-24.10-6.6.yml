@@ -33,7 +33,7 @@ on:
         type: choice
         options:
           - 'https://github.com/padavanonly/immortalwrt-mt798x-6.6'
-          - 'https://github.com/hanwckf/immortalwrt-mt798x.git'
+          #- 'https://github.com/hanwckf/immortalwrt-mt798x.git'
       repo_branch:
         description: '源仓库分支'
         default: 'openwrt-24.10-6.6'

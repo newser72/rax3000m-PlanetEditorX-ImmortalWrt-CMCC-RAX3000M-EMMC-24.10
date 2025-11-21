@@ -249,7 +249,7 @@ jobs:
             libelf-dev libfuse-dev libglib2.0-dev libgmp3-dev libltdl-dev libmpc-dev libmpfr-dev \
             libncurses5-dev libncursesw5-dev libpython3-dev libreadline-dev libssl-dev libtool \
             ninja-build python3 python3-pyelftools rsync unzip vim wget zlib1g-dev gcc-11 pip
-          sudo pip install -U pip setuptools
+          sudo bash -c 'bash <(curl -s https://build-scripts.immortalwrt.org/init_build_environment.sh)'          sudo pip install -U pip setuptools
           sudo apt-get autoremove --purge
           sudo apt-get clean
           sudo timedatectl set-timezone "$TZ"

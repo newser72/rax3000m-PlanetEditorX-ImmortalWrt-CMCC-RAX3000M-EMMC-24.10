@@ -44,5 +44,6 @@ if [ -f "$EEPROM_FILE" ]; then
   ls -l files/lib/firmware/e2p || { echo "错误：符号链接创建失败"; exit 1; }
 else
   echo "错误：$EEPROM_FILE 不存在，无法创建符号链接"
-  exit 1
+  cp scripts/nx30pro_eeprom.bin openwrt/package/mtk/drivers/mt_wifi/files/mt7981-default-eeprom/MT7981_iPAiLNA_EEPROM.bin
+  #exit 1
 fi

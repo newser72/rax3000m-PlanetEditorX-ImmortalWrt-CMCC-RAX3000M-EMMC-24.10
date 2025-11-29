@@ -590,7 +590,7 @@ jobs:
           fi
 
           # 生成标签
-          TAG="ImmortalWrt-24.10-6.6-${{ matrix.device_model }}-${{ env.FIRMWARE_VERSION }}"
+          TAG="ImmortalWrt-$REPO_BRANCH-${{ matrix.device_model }}-${{ env.FIRMWARE_VERSION }}"
           echo "RELEASE_TAG=$TAG-$(date +%Y%m%d%H%M%S)" | tee -a $GITHUB_OUTPUT >> $GITHUB_ENV
 
           # 生成发布说明

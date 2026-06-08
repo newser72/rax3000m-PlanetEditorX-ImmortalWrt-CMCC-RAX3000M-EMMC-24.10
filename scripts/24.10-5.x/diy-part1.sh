@@ -25,6 +25,8 @@ src/gz immortalwrt_routing https://mirrors.vsean.net/openwrt/releases/24.10-SNAP
 src/gz immortalwrt_telephony https://mirrors.vsean.net/openwrt/releases/24.10-SNAPSHOT/packages/aarch64_cortex-a53/telephony
 EOF
 
+echo 'src-git rtp2httpd https://github.com/stackia/rtp2httpd.git' >>feeds.conf.default
+
 # 检查是否成功创建 distfeeds.conf
 if [ -f "${CUSTOM_DISTFEEDS_CONF}" ]; then
   echo "自定义 distfeeds.conf 已成功创建在 ${CUSTOM_DISTFEEDS_CONF}"

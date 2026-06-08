@@ -10,3 +10,4 @@
 # 描述: OpenWrt DIY 脚本第一部分 (更新 feeds 之前)
 
 
+echo 'src-git rtp2httpd https://github.com/stackia/rtp2httpd.git' >>feeds.conf.default

@@ -95,6 +95,14 @@ jobs:
       latest_commit_message: ${{ steps.check.outputs.LATEST_COMMIT_MESSAGE }}
 
     steps:
+      - name: 安装升级nodejs
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+          sudo npm update -g
+        
       - name: 检出本仓库代码
         uses: actions/checkout@v4
 

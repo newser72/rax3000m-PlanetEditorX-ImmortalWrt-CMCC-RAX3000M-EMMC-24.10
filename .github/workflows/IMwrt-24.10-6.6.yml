@@ -416,7 +416,7 @@ jobs:
         if: (github.event.inputs.ssh == 'true')
 
       - name: 上传 .config
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         if: (github.event.inputs.ssh == 'true')
         with:
           name: OpenWrt_config
@@ -451,7 +451,7 @@ jobs:
 
       - name: 上传编译日志
         if: failure()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: compile-log-${{ matrix.device_model }}
           path: |
@@ -501,7 +501,7 @@ jobs:
           echo "status=success" >> $GITHUB_OUTPUT
 
       - name: 上传 bin
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         if: steps.compile.outputs.status == 'success' && github.event_name == 'workflow_dispatch' && github.event.inputs.upload_bin_dir == 'true'
         with:
           name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}

@@ -501,7 +501,7 @@ jobs:
           echo "status=success" >> $GITHUB_OUTPUT
 
       - name: 上传 bin
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: steps.compile.outputs.status == 'success' && github.event_name == 'workflow_dispatch' && github.event.inputs.upload_bin_dir == 'true'
         with:
           name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
@@ -643,13 +643,13 @@ jobs:
           gh cache list
 
       - name: 保存此次提交sha缓存
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: last_build_sha.txt
           key: ${{ env.REPO_PATH }}-${{ env.REPO_BRANCH }}-last-build-sha
 
       - name: 保存 last_checked_sha 缓存
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: last_checked_sha.txt
           key: ${{ env.REPO_PATH }}-${{ env.REPO_BRANCH }}-last-checked-sha

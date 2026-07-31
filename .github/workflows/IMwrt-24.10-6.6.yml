@@ -86,6 +86,7 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
   BUILD_COMMIT_MSGS_FILE: ''
   CHECKED_COMMIT_MSGS_FILE: ''
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
 jobs:
   check-source-updates:

@@ -97,15 +97,15 @@ jobs:
       latest_commit_message: ${{ steps.check.outputs.LATEST_COMMIT_MESSAGE }}
 
     steps:
-      - name: 安装升级nodejs
-        env:
-          DEBIAN_FRONTEND: noninteractive
-        run: |
-          sudo apt update && sudo apt upgrade -y
-          sudo apt install -y curl dirmngr apt-transport-https lsb-release ca-certificates
-          curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-          sudo apt install -y nodejs
-          sudo npm update -g
+      #- name: 安装升级nodejs
+      #  env:
+      #    DEBIAN_FRONTEND: noninteractive
+      #  run: |
+      #    sudo apt update && sudo apt upgrade -y
+      #    sudo apt install -y curl dirmngr apt-transport-https lsb-release ca-certificates
+      #    curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+      #    sudo apt install -y nodejs
+      #    sudo npm update -g
         
       - name: 检出本仓库代码
         uses: actions/checkout@v5
@@ -372,7 +372,7 @@ jobs:
 
       - name: 下载软件包
         id: package
-        timeout-minutes: 30
+        timeout-minutes: 90
         run: |
           cd openwrt
           make download -j8 || { echo "下载软件包失败"; exit 1; }
